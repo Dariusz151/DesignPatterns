@@ -126,6 +126,20 @@ namespace VisitorPattern
 
             o.Accept(t2);
 
+
+            Console.WriteLine("Acyclic visitor");
+          
+           
+                var expression = new AcyclicVisitor.AdditionExpression(
+                   new AcyclicVisitor.DoubleExpression(1),
+                   new AcyclicVisitor.AdditionExpression(
+                       new AcyclicVisitor.DoubleExpression(2),
+                       new AcyclicVisitor.DoubleExpression(3)));
+
+            var acyclic_ep = new AcyclicVisitor.ExpressionPrinter();
+            acyclic_ep.Visit(expression);
+            Console.WriteLine(acyclic_ep.ToString());
+            
             Console.ReadLine();
         }
     }
