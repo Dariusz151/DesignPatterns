@@ -139,7 +139,19 @@ namespace VisitorPattern
             var acyclic_ep = new AcyclicVisitor.ExpressionPrinter();
             acyclic_ep.Visit(expression);
             Console.WriteLine(acyclic_ep.ToString());
-            
+
+
+            Console.WriteLine();
+
+            Console.WriteLine("Code exercise");
+
+            var simple = new Coding.Exercise.AdditionExpression(new Coding.Exercise.Value(2), new Coding.Exercise.Value(3));
+            var exercise_ep = new Coding.Exercise.ExpressionPrinter();
+            exercise_ep.Visit(simple);
+
+            Console.WriteLine(exercise_ep.ToString());
+
+
             Console.ReadLine();
         }
     }
