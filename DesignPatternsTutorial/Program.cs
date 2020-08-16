@@ -1,12 +1,18 @@
 ﻿using System;
+using DesignPatternsTutorial.Decorator;
 
 namespace DesignPatternsTutorial
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
+        public static void Main(string[] args)
+        { 
+            //Console.WriteLine("Hello World!");
+            MyStringBuilder s = "hello ";
+            s += "world";
+            Console.WriteLine(s);
+
+            Console.ReadLine();
         }
     }
 }
